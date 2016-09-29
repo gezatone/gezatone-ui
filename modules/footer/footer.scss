@@ -1,0 +1,33 @@
+.footer{
+	padding: 0.75rem;
+	background-color: $color__green--dark;
+
+	// pseudo-classes
+
+	// mods
+
+	// pseudo-elements
+
+	// elements
+	&__{
+		&content{
+			@extend .g-section__content;
+			@extend .b-grid;
+			@extend .b-grid--row;
+			align-items: center;
+		}
+		&button{
+			@extend .button;
+			width: 12.5rem;
+			min-width: 12.5rem;
+			margin-right: 3rem;
+			line-height: 2.75rem;
+			text-align: center;
+
+			color: $color__gray--dark;
+			font-size: 1.25rem;
+			font-weight: 700;
+			background-color: $color--secondary;
+		}
+	}
+}
