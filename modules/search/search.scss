@@ -1,0 +1,62 @@
+.search{
+	z-index: 2;
+	opacity: 0;
+	visibility: hidden;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	right: -1px;
+	width: 100%;
+	height: 100%;
+	@extend .b-grid;
+	@extend .b-grid--row;
+	align-items: center;
+	padding: 0.625rem;
+	border-radius: 3.75rem;
+	background-color: $color__white;
+	transition: calc($animation__duration * 2);
+	// pseudo-classes
+
+	// mods
+
+	// pseudo-elements
+
+	// elements
+	&__{
+		&icon{
+			max-width: 1.5rem;
+			max-height: 1.5rem;
+			margin-left: 1rem;
+			fill: currentColor;
+		}
+		&input{
+			opacity: 1;
+			width: 100%;
+			height: 100%;
+			padding: 0 1rem;
+			border: none;
+
+			color: $color__font--primary;
+			font-family: $font-family--primary;
+			font-size: 1.5rem;
+			font-weight: 300;
+		}
+		&button{
+			width: 6.25rem;
+			height: 100%;
+			border: none;
+			background-color: $color--secondary;
+			border-radius: 1.5rem;
+
+			font-family: $font-family--secondary;
+			font-size: 0.875rem;
+			font-weight: 700;
+			color: $color__font--primary;
+			text-transform: uppercase;
+			cursor: pointer;
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+	}
+}
