@@ -1,0 +1,10 @@
+.button{
+	display: block;
+	text-decoration: none;
+	border-radius: 0.375rem;
+	cursor: pointer;
+	transition: $animation__duration;
+	&:hover{
+		opacity: 0.8;
+	}
+}
