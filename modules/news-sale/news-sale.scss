@@ -1,0 +1,20 @@
+.news-sale{
+	@extend .b-grid;
+	@extend .b-grid--row;
+	height: 32rem;
+	// pseudo-classes
+
+	// mods
+
+	// pseudo-elements
+
+	// elements
+	&__{
+		&news{
+			width: 59%;
+		}
+		&sale{
+			width: 40%;
+		}
+	}
+}
