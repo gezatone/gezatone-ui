@@ -1,0 +1,22 @@
+// direct
+$color__white: #fff;
+$color__black: #000;
+$color__gray: hsl(0, 0%, 25%);
+$color__gray--light: hsl(0, 0%, 33%);
+$color__gray--lightest: hsl(0, 0%, 87%);
+$color__gray--dark: hsl(0, 0%, 20%);
+$color__green: hsl(174, 100%, 32%);
+$color__green--light: hsl(174, 71%, 64%);
+$color__green--dark: hsl(173, 97%, 25%);
+$color__green--darkest: hsl(174, 90%, 23%);
+$color__yellow: hsl(50, 98%, 54%);
+$color__pink: hsl(343, 100%, 97%);
+$color__pink--dark: hsl(345, 89%, 96%);
+
+// abstract
+$color--primary: $color__green;
+$color--secondary: $color__yellow;
+
+// font
+$color__font--primary: $color__gray;
+$color__font--secondary: $color__green;
