@@ -1,0 +1,53 @@
+.carousel-main{
+	position: relative;
+	height: 450px;
+	// pseudo-classes
+
+	// mods
+
+	// pseudo-elements
+
+	// elements
+	&__{
+		&img{
+			position: absolute 0 0 0 0;
+			z-index: -1;
+		}
+		&item{
+			height: 100%;
+		}
+		&content{
+			@extend .g-section__content;
+			@extend .b-grid;
+			justify-content: flex-end;
+			align-items: center;
+			height: 100%;
+		}
+		&info{
+			width: 50%;
+		}
+		&title{
+			color: $color__white;
+			font-size: 1.75rem;
+			font-weight: 300;
+			&-{
+				&bold{
+					font-weight: 700;
+				}
+			}
+		}
+		&button{
+			@extend .button;
+			width: 9.375rem;
+			margin-top: 1rem;
+			line-height: 2.5rem;
+			text-align: center;
+			background-color: $color--secondary;
+
+			font-size: 0.875rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $color__font--primary;
+		}
+	}
+}
