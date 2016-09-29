@@ -1,0 +1,20 @@
+.menu-footer{
+	width: 100%;
+	@extend .b-grid;
+	justify-content: space-around;
+	// pseudo-classes
+
+	// mods
+
+	// pseudo-elements
+
+	// elements
+	&__{
+		&link{
+			display: block;
+			color: $color__white;
+			font-size: 0.875rem;
+			text-decoration: none;
+		}
+	}
+}
