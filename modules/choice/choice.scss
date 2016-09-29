@@ -1,0 +1,32 @@
+.choice{
+	// pseudo-classes
+
+	// mods
+
+	// pseudo-elements
+
+	// elements
+	&__{
+		&wrap{
+			@extend .b-grid;
+			@extend .b-grid--row;
+		}
+		&col{
+			width: 25%;
+		}
+		&button{
+			@extend .button;
+			width: 12.5rem;
+			height: 2.75rem;
+			margin: 2.375rem auto;
+			background: none;
+			border: none;
+			box-shadow: 0 0 0 1px $color__gray--light;
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $color__gray--light;
+			background-color: $color__pink;
+		}
+	}
+}
