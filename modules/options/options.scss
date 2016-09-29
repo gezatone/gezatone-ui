@@ -1,0 +1,66 @@
+.options{
+
+	// pseudo-classes
+
+	// mods
+	&--{
+		&age .options__head{
+			background-color: $color__green--light;
+			color: $color__gray--dark;
+		}
+		&age .options__body{
+			text-align: center;
+			background-color: $color--primary;
+		}
+	}
+	// pseudo-elements
+
+	// elements
+	&__{
+		&head{
+			line-height: 4.375rem;
+			text-align: center;
+			font-size: 1.125rem;
+			font-weight: 300;
+		}
+		&body{
+			padding: 2rem;
+		}
+		&year{
+			color: $color__white;
+			font-size: 2.125rem;
+			font-weight: 300;
+		}
+		&edit{
+			display: inline-block;
+			color: $color__white;
+			font-size: 0.875rem;
+			font-weight: 300;
+			border-bottom: 1px dashed $color__white;
+			cursor: pointer;
+			transition: $animation__duration;
+			&:hover{
+				border-bottom-color: transparent;
+			}
+		}
+		&check{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			size: 8.125rem;
+			border-radius: 50%;
+			margin: 2rem auto 3rem;
+			background-color: $color--secondary;
+			&-{
+				&icon{
+					max-width: 3.75rem;
+					max-height: 3.25rem;
+					fill: currentColor;
+				}
+			}
+		}
+		&radio{
+			margin: 0.5rem 0 1rem 0;
+		}
+	}
+}
