@@ -1,0 +1,39 @@
+.about{
+	background-color: $color__pink;
+	padding: 0 0 2.5rem 0;
+	// pseudo-classes
+
+	// mods
+
+	// pseudo-elements
+
+	// elements
+	&__{
+		&body{
+			@extend .b-grid;
+			@extend .b-grid--row;
+			&:not(._active){
+				position: relative;
+				height: 5rem;
+				overflow: hidden;
+				&:after{
+					content: "";
+					position: absolute 0 0 0 0;
+					box-shadow: inset 0 -2rem 2rem $color__pink;
+					z-index: 2;
+				}
+			}
+		}
+		&col{
+			width: 49%;
+		}
+		&more{
+			margin: 2.5rem 0 0;
+			text-align: center;
+			font-size: 0.75rem;
+			font-weight: 300;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+}
