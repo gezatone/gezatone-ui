@@ -1,0 +1,77 @@
+.actions{
+	@extend .b-grid;
+	margin-right: 2px;
+	// pseudo-classes
+
+	// mods
+
+	// pseudo-elements
+
+	// elements
+	&__{
+		&item{
+			position: relative;
+			cursor: pointer;
+			&--{
+				&search{
+					&._active .search{
+						opacity: 1;
+						visibility: visible;
+						width: 56rem;
+					}
+				}
+			}
+			&-{
+				&wrap{
+					box-sizing: border-box;
+					size: 3.75rem;
+					box-shadow: 0 0 0 1px $color__gray--lightest;
+					border-radius: 50%;
+					margin: 1px;
+
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					color: $color__gray--dark;
+				}
+			}
+			&:not(:last-child){
+				margin-right: 2rem;
+			}
+		}
+		&item._active &number{
+			display: block;
+		}
+		&item._active &item-wrap{
+			box-shadow: 0 0 0 2px $color--secondary;
+			color: $color__green--dark;
+		}
+		&item:hover &item-wrap{
+			box-shadow: 0 0 0 2px $color--secondary;
+			color: $color__green--dark;
+		}
+		&icon{
+			fill: currentColor;
+			max-width: 1.625rem;
+			max-height: 1.625rem;
+		}
+		&number{
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translate(25%, -25%);
+
+			size: 1.5rem;
+			border-radius: 50%;
+
+			text-align: center;
+			line-height: 1.5rem;
+			font-size: 0.875rem;
+			font-weight: 700;
+			color: $color__gray--dark;
+			background-color: $color--secondary;
+		}
+	}
+}
