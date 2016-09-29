@@ -1,0 +1,39 @@
+.header{
+
+	background-color: $color__white;
+	// pseudo-classes
+
+	// mods
+
+	// pseudo-elements
+
+	// elements
+	&__{
+		&content{
+			position: relative;
+			padding: 1rem 2rem;
+			@extend .g-section__content;
+		}
+		&wrap{
+			@extend .b-grid;
+			@extend .b-grid--row;
+			align-items: center;
+		}
+		&logo{
+			max-width: 12rem;
+			max-height: 1.75rem;
+			color: $color__gray--dark;
+			&-{
+				&icon{
+					fill: currentColor;
+				}
+			}
+		}
+		&phone{
+			color: $color__gray--dark;
+			font-size: 1.25rem;
+			font-weight: 700;
+			text-decoration: none;
+		}
+	}
+}
