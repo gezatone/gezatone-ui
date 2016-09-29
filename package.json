@@ -1,0 +1,56 @@
+{
+  "name": "gezatone",
+  "version": "1.0.0",
+  "description": "Layout site",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server --content-base build/",
+    "test": "ava test/*.js",
+    "test:scripts": "eslint '{modules,src,tasks,test}/**/*.js'",
+    "test:styles": "stylelint '{modules,src}/**/*.scss'",
+    "test:html": "htmlhint '{modules,src,build}/**/*.html'",
+    "posttest": "npm run test:scripts && npm run test:html && npm run test:styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gezatone/gezatone-ui.git"
+  },
+  "keywords": [],
+  "author": "alanev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gezatone/gezatone-ui/issues"
+  },
+  "homepage": "https://github.com/gezatone/gezatone-ui#readme",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.6.1",
+    "eslint-loader": "^1.5.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "htmlhint": "^0.9.13",
+    "img-loader": "^1.3.1",
+    "modernizr": "^3.3.1",
+    "modernizr-loader": "0.0.5",
+    "nodemon": "^1.10.2",
+    "postcss-loader": "^0.13.0",
+    "postcss-pack-alanev": "^1.1.0",
+    "postxml": "^0.2.9",
+    "postxml-pack-alanev": "^1.0.0",
+    "stylelint": "^7.3.1",
+    "stylelint-config-standard": "^13.0.2",
+    "webp-loader": "^0.1.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "os": [
+    "linux"
+  ]
+}
