@@ -1,0 +1,29 @@
+.g-section{
+	// pseudo-classes
+
+	// mods
+
+	// pseudo-elements
+
+	// elements
+	&__{
+		&content{
+			width: $content;
+			// max-width: $content;
+			padding: 0 2rem;
+			margin: 0 auto;
+			// @media(--tablet-only){
+			// 	max-width: $content--tablet;
+			// }
+			// @media(--phone-only){
+			// 	width: $content--phone;
+			// }
+		}
+		&title{
+			padding: 2.5rem 0 1.5rem 0;
+			font-size: 2.125rem;
+			font-weight: 300;
+			line-height: 2.125rem;
+		}
+	}
+}
