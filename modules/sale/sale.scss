@@ -1,0 +1,63 @@
+.sale{
+	box-sizing: border-box;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	padding: 1.5rem;
+
+	background-color: $color__green--light;
+	// pseudo-classes
+
+	// mods
+
+	// pseudo-elements
+
+	// elements
+	&__{
+		&preview{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+		&img{
+			display: block;
+		}
+		&tags{
+			position: absolute;
+			top: 1.5rem;
+			left: 1.5rem;
+		}
+		&price{
+			@extend .b-grid;
+			align-items: center;
+			color: $color__gray--light;
+			&-{
+				&through{
+					font-weight: 300;
+					font-size: 0.75rem;
+					line-height: 0.75rem;
+					text-decoration: line-through;
+				}
+				&was{
+					font-size: 0.625rem;
+					text-decoration: none;
+				}
+				&new{
+					margin-left: 0.5rem;
+					font-size: 1.5rem;
+					font-weight: 700;
+					color: $color__font--secondary;
+				}
+			}
+		}
+		&name{
+			margin-top: 0.5rem;
+			font-size: 1.125rem;
+			font-weight: 300;
+		}
+	}
+}
