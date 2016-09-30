@@ -1,20 +1,78 @@
 .menu{
-	background-color: $color__green--dark;
 	// pseudo-classes
 
 	// mods
-
+	&--{
+		&desktop{
+			@media(--desktop-less){
+				display: none;
+			}
+		}
+		&mobile{
+			@media(--desktop-more){
+				display: none;
+			}
+			background-color: transparent;
+			.menu__content{
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+				padding: 0;
+			}
+			.menu__link{
+				padding: 0;
+				margin: 0 1rem;
+				text-transform: uppercase;
+				font-size: 0.75rem;
+				font-weight: 700;
+				text-align: left;
+			}
+			.menu__item{
+				width: 100%;
+			}
+		}
+	}
 	// pseudo-elements
 
 	// elements
 	&__{
 		&content{
-			@extend .g-section__content;
 			@extend .b-grid;
 			@extend .b-grid--row;
 			align-items: center;
 		}
+		&item{
+			position: relative;
+			@media(--desktop-more){
+				&._active{
+					background-color: $color__font--secondary;
+					box-shadow: inset 0 -4px 0 $color--secondary;
+				}
+			}
+			&:hover .menu__submenu{
+				opacity: 1;
+				visibility: visible;
+			}
+			&._active .menu__submenu{
+				@media(--desktop-less){
+					opacity: 1;
+					visibility: visible;
+					height: auto;
+				}
+			}
+			&._active .menu__link{
+				@media(--desktop-less){
+					border-bottom: 0;
+				}
+			}
+			&._active .menu__link-icon{
+				@media(--desktop-less){
+					transform: translate(0, -50%) rotate(90deg);
+				}
+			}
+		}
 		&link{
+			position: relative;
 			box-sizing: border-box;
 			display: block;
 			height: 3rem;
@@ -26,13 +84,63 @@
 
 			color: $color__white;
 			font-size: 0.875rem;
-			&._active{
-				background-color: $color__font--secondary;
-				box-shadow: inset 0 -4px 0 $color--secondary;
+
+			transition: $animation__duration;
+
+			@media(--desktop-less){
+				height: 2.5rem;
+				line-height: 2.5rem;
+				box-shadow: 0 1px 0 color($color__gray--lightest a(0.2));
 			}
+
 			&:not(._active){
 				&:hover{
 					color: $color--secondary;
+				}
+			}
+
+			&-{
+				&icon{
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translate(0, -50%);
+
+					@media(--desktop-more){
+						display: none;
+					}
+				}
+			}
+		}
+		&submenu{
+			opacity: 0;
+			visibility: hidden;
+			padding: 0.5rem 1.5rem;
+			background-color: $color--primary;
+			transition: $animation__duration;
+			@media(--desktop-more){
+				z-index: 2;
+				position: absolute;
+				top: 100%;
+				left: 0;
+			}
+			@media(--desktop-less){
+				height: 0;
+			}
+			&-{
+				&link{
+					display: block;
+					padding: 0.5rem 0;
+					white-space: nowrap;
+					text-decoration: none;
+					color: $color__white;
+					transition: $animation__duration;
+					&:hover{
+						color: $color--secondary;
+					}
+					@media(--desktop-less){
+						font-size: 0.75rem;
+					}
 				}
 			}
 		}
