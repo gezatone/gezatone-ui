@@ -1,9 +1,38 @@
 .menu-pages{
 	@extend .b-grid;
+	@media(--desktop-less){
+		padding: 0 1rem;
+	}
 	// pseudo-classes
 
 	// mods
+	&--{
+		&desktop{
+			@media(--desktop-less){
+				display: none;
+			}
+		}
+		&mobile{
+			@media(--desktop-more){
+				display: none;
+			}
 
+			flex-direction: column;
+			margin-top: 2rem;
+
+			.menu-pages__link{
+				text-transform: uppercase;
+				color: $color__white;
+				&:not(:last-child){
+					margin-right: 0;
+					margin-bottom: 2rem;
+				}
+				&._active{
+					color: $color--secondary;
+				}
+			}
+		}
+	}
 	// pseudo-elements
 
 	// elements
