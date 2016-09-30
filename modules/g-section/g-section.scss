@@ -1,29 +1,48 @@
 .g-section{
+	max-width: 100%;
 	// pseudo-classes
 
 	// mods
-
+	&--{
+		&bg-pink{
+			background-color: $color__pink;
+		}
+		&bg-green{
+			background-color: $color__green;
+		}
+		&bg-green-dark{
+			background-color: $color__green--dark;
+		}
+		&bg-green-darkest{
+			background-color: $color__green--darkest;
+		}
+	}
 	// pseudo-elements
 
 	// elements
 	&__{
 		&content{
 			width: $content;
-			// max-width: $content;
-			padding: 0 2rem;
+			max-width: $content;
+			padding: 0 1.5rem;
 			margin: 0 auto;
-			// @media(--tablet-only){
-			// 	max-width: $content--tablet;
-			// }
-			// @media(--phone-only){
-			// 	width: $content--phone;
-			// }
+			@media(--tablet-only){
+				max-width: $content--tablet;
+				width: $content--tablet;
+			}
+			@media(--phone-only){
+				max-width: $content--phone;
+				width: $content--phone;
+			}
 		}
 		&title{
 			padding: 2.5rem 0 1.5rem 0;
 			font-size: 2.125rem;
 			font-weight: 300;
 			line-height: 2.125rem;
+			@media(--tablet-less){
+				font-size: 1.375rem;
+			}
 		}
 	}
 }
