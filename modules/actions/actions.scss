@@ -1,6 +1,10 @@
 .actions{
 	@extend .b-grid;
 	margin-right: 2px;
+
+	@media(--desktop-less){
+		justify-content: space-between;
+	}
 	// pseudo-classes
 
 	// mods
@@ -9,6 +13,14 @@
 
 	// elements
 	&__{
+		&box{
+			@extend .b-grid;
+			@media(--desktop-more){
+				&:not(:last-child){
+					margin-right: 2rem;
+				}
+			}
+		}
 		&item{
 			position: relative;
 			cursor: pointer;
@@ -20,12 +32,16 @@
 						width: 56rem;
 					}
 				}
+				&menu{
+					@media(--desktop-more){
+						display: none;
+					}
+				}
 			}
 			&-{
 				&wrap{
 					box-sizing: border-box;
 					size: 3.75rem;
-					box-shadow: 0 0 0 1px $color__gray--lightest;
 					border-radius: 50%;
 					margin: 1px;
 
@@ -34,10 +50,19 @@
 					align-items: center;
 
 					color: $color__gray--dark;
+					@media(--desktop-more){
+						box-shadow: 0 0 0 1px $color__gray--lightest;
+					}
+					@media(--tablet-less){
+						size: auto;
+					}
 				}
 			}
 			&:not(:last-child){
 				margin-right: 2rem;
+				@media(--desktop-less){
+					margin-right: 1rem;
+				}
 			}
 		}
 		&item._active &number{
@@ -46,10 +71,18 @@
 		&item._active &item-wrap{
 			box-shadow: 0 0 0 2px $color--secondary;
 			color: $color__green--dark;
+			@media(--tablet-less){
+				box-shadow: none;
+				color: $color--primary;
+			}
 		}
 		&item:hover &item-wrap{
 			box-shadow: 0 0 0 2px $color--secondary;
 			color: $color__green--dark;
+			@media(--tablet-less){
+				box-shadow: none;
+				color: $color--primary;
+			}
 		}
 		&icon{
 			fill: currentColor;
@@ -72,6 +105,9 @@
 			font-weight: 700;
 			color: $color__gray--dark;
 			background-color: $color--secondary;
+			@media(--tablet-less){
+				transform: translate(50%, -50%);
+			}
 		}
 	}
 }
