@@ -10,9 +10,19 @@
 		&wrap{
 			@extend .b-grid;
 			@extend .b-grid--row;
+			box-shadow: 0 0 0 1px $color__pink--dark;
+			@media(--desktop-less){
+				flex-wrap: wrap;
+			}
 		}
 		&col{
 			width: 25%;
+			@media(--tablet-only){
+				width: 50%;
+			}
+			@media(--tablet-less){
+				width: 100%;
+			}
 		}
 		&button{
 			@extend .button;
@@ -27,6 +37,9 @@
 			text-transform: uppercase;
 			color: $color__gray--light;
 			background-color: $color__pink;
+			@media(--tablet-less){
+				width: 100%;
+			}
 		}
 	}
 }
