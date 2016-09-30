@@ -1,6 +1,10 @@
 .about{
 	background-color: $color__pink;
 	padding: 0 0 2.5rem 0;
+
+	@media(--desktop-less){
+		display: none;
+	}
 	// pseudo-classes
 
 	// mods
