@@ -1,5 +1,5 @@
 const webpack = require('webpack')
-const postcssPack = require('postcss-pack-alanev')
+const postcssPack = require('./utils/postcss-pack')
 const postxmlPack = require('postxml-pack-alanev')
 
 module.exports = {
@@ -35,7 +35,7 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.(s?css)$/,
+				test: /\.s?css$/,
 				loaders: [
 					'file?name=[name].css',
 					'extract',
@@ -44,7 +44,7 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(html?)$/,
+				test: /\.html?$/,
 				loaders: [
 					'file?name=[name].[ext]',
 					'postxml'
@@ -66,11 +66,8 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new webpack.optimize.UglifyJsPlugin(),
 		new webpack.HotModuleReplacementPlugin()
 	],
-	postcss () {
-		return postcssPack
-	},
+	postcss: postcssPack,
 	postxml: postxmlPack
 }
