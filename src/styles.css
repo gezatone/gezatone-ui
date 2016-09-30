@@ -33,5 +33,10 @@
 @import 'options';
 @import 'form';
 @import 'about';
+
 @import 'search';
+
 @import 'cart-mini';
+@import 'phone';
+@import 'menu-mobile';
+@import 'payment';
