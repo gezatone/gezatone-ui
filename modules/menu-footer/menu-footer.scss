@@ -2,6 +2,9 @@
 	width: 100%;
 	@extend .b-grid;
 	justify-content: space-around;
+	@media(--desktop-less){
+		display: none;
+	}
 	// pseudo-classes
 
 	// mods
