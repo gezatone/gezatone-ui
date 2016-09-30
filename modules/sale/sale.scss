@@ -9,6 +9,9 @@
 	padding: 1.5rem;
 
 	background-color: $color__green--light;
+	@media(--tablet-less){
+		padding: 1rem;
+	}
 	// pseudo-classes
 
 	// mods
@@ -22,14 +25,34 @@
 			justify-content: center;
 			align-items: center;
 			height: 100%;
+
+			@media(--tablet-less){
+				height: auto;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
 		}
 		&img{
 			display: block;
+
+			@media(--tablet-less){
+				width: auto;
+				max-height: 15rem;
+			}
 		}
 		&tags{
 			position: absolute;
 			top: 1.5rem;
 			left: 1.5rem;
+			@media(--tablet-less){
+				top: 1rem;
+				left: 1rem;
+			}
+		}
+		&info{
+			z-index: 2;
 		}
 		&price{
 			@extend .b-grid;
