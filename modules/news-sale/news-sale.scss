@@ -1,7 +1,10 @@
 .news-sale{
 	@extend .b-grid;
 	@extend .b-grid--row;
-	height: 32rem;
+	@media(--desktop-less){
+		flex-direction: column;
+		height: auto;
+	}
 	// pseudo-classes
 
 	// mods
@@ -11,10 +14,24 @@
 	// elements
 	&__{
 		&news{
+			height: 32rem;
 			width: 59%;
+			@media(--desktop-less){
+				width: 100%;
+			}
+			@media(--tablet-less){
+				height: 20rem;
+			}
 		}
 		&sale{
 			width: 40%;
+			height: 32rem;
+			@media(--desktop-less){
+				width: 100%;
+			}
+			@media(--tablet-less){
+				height: 20rem;
+			}
 		}
 	}
 }
