@@ -1,5 +1,4 @@
 .information{
-	background-color: $color__font--secondary;
 	// pseudo-classes
 
 	// mods
@@ -9,7 +8,6 @@
 	// elements
 	&__{
 		&content{
-			@extend .g-section__content;
 			@extend .b-grid;
 			@extend .b-grid--row;
 
@@ -18,6 +16,15 @@
 		}
 		&links{
 			@extend .b-grid;
+
+			@media(--tablet-only){
+				width: 100%;
+				justify-content: space-around;
+			}
+			@media(--tablet-less){
+				width: 100%;
+				justify-content: center;
+			}
 		}
 		&link{
 			display: block;
@@ -25,6 +32,16 @@
 			color: $color__white;
 			font-size: 0.75rem;
 			text-transform: uppercase;
+			@media(--desktop-less){
+				&:not(:last-child){
+					margin-right: 0;
+				}
+			}
+			@media(--tablet-less){
+				&:not(:first-child){
+					display: none;
+				}
+			}
 			&:not(:last-child){
 				margin-right: 4rem;
 			}
@@ -33,24 +50,6 @@
 					max-width: 1.5rem;
 					max-height: 1.125rem;
 					fill: currentColor;
-				}
-			}
-		}
-		&pays{
-			@extend .b-grid;
-			align-items: center;
-			&-{
-				&text{
-					margin-right: 1.5rem;
-
-					color: $color__white;
-					font-size: 0.75rem;
-					text-transform: uppercase;
-				}
-				&icon{
-					&:not(:last-child){
-						margin-right: 1.5rem;
-					}
 				}
 			}
 		}
