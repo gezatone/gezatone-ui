@@ -1,16 +1,19 @@
 .options{
-
+	box-shadow: 1px 0 0 $color__pink--dark;
 	// pseudo-classes
 
 	// mods
 	&--{
+		&age{
+			height: 100%;
+			background-color: $color--primary;
+		}
 		&age .options__head{
 			background-color: $color__green--light;
 			color: $color__gray--dark;
 		}
 		&age .options__body{
 			text-align: center;
-			background-color: $color--primary;
 		}
 	}
 	// pseudo-elements
@@ -22,6 +25,7 @@
 			text-align: center;
 			font-size: 1.125rem;
 			font-weight: 300;
+			background-color: color($color__gray--lightest a(0.3));
 		}
 		&body{
 			padding: 2rem;
