@@ -1,0 +1,40 @@
+.payment{
+
+	@extend .b-grid;
+	align-items: center;
+	// pseudo-classes
+
+	// mods
+	&--{
+		&desktop{
+			@media(--desktop-less){
+				display: none;
+			}
+		}
+		&mobile{
+			@media(--desktop-more){
+				display: none;
+			}
+			@media(--tablet-less){
+				display: none;
+			}
+		}
+	}
+	// pseudo-elements
+
+	// elements
+	&__{
+		&text{
+			margin-right: 1.5rem;
+
+			color: $color__white;
+			font-size: 0.75rem;
+			text-transform: uppercase;
+		}
+		&icon{
+			&:not(:last-child){
+				margin-right: 1.5rem;
+			}
+		}
+	}
+}
