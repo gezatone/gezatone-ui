@@ -28,6 +28,22 @@
 				font-weight: 700;
 				color: $color__font--secondary;
 			}
+			@media(--tablet-less){
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+
+				width: 100%;
+				padding: 1rem;
+				border: none;
+
+				font-size: 1.5rem;
+				background-color: color($color__white a(0.7));
+				br{
+					display: none;
+				}
+			}
 		}
 		&description{
 			height: 3.75rem;
@@ -35,6 +51,9 @@
 			font-size: 0.75rem;
 			font-weight: 300;
 			overflow: hidden;
+			@media(--tablet-less){
+				display: none;
+			}
 		}
 		&img{
 			z-index: -1;
@@ -42,12 +61,19 @@
 			top: 0;
 			right: 0;
 			height: 100%;
+			@media(--tablet-less){
+				width: 100;
+				max-width: 100%;
+			}
 		}
 		&icon{
 			position: absolute;
 			bottom: 100%;
 			left: 50%;
 			transform: translate(-50%, 0);
+			@media(--tablet-less){
+				display: none;
+			}
 		}
 		&button{
 			@extend .button;
@@ -61,11 +87,18 @@
 			text-transform: uppercase;
 			background-color: $color--primary;
 			color: $color__white;
+			@media(--tablet-less){
+				display: none;
+			}
 		}
 		&tags{
 			position: absolute;
 			top: 1.5rem;
 			left: 1.5rem;
+			@media(--tablet-less){
+				top: 1rem;
+				left: 1rem;
+			}
 		}
 	}
 }
