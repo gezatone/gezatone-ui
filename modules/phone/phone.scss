@@ -1,0 +1,42 @@
+.phone{
+	box-sizing: border-box;
+	width: 12.5rem;
+	min-width: 12.5rem;
+	margin-right: 3rem;
+	@media(--tablet-less){
+		margin-right: 0;
+	}
+	// pseudo-classes
+
+	// mods
+	&--{
+		&desktop{
+			@media(--desktop-less){
+				display: none;
+			}
+		}
+		&mobile{
+			width: 100%;
+			max-width: 100%;
+			padding: 2rem 1rem 0 1rem;
+			@media(--desktop-more){
+				display: none;
+			}
+		}
+	}
+	// pseudo-elements
+
+	// elements
+	&__{
+		&button{
+			@extend .button;
+			line-height: 2.75rem;
+			text-align: center;
+
+			color: $color__gray--dark;
+			font-size: 1.25rem;
+			font-weight: 700;
+			background-color: $color--secondary;
+		}
+	}
+}
