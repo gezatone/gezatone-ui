@@ -98,7 +98,7 @@
 		}
 		&button{
 			z-index: 1;
-			@extend .button;
+			@extend .button--flex;
 			width: 12.5rem;
 			margin-top: 1rem;
 			line-height: 2.75rem;
@@ -110,6 +110,11 @@
 			color: $color__white;
 			@media(--tablet-less){
 				width: 8.75rem;
+			}
+			&-{
+				&icon{
+					@extend .carousel-main__button-icon;
+				}
 			}
 		}
 		&links{
