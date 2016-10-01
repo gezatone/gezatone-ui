@@ -25,6 +25,13 @@
 			&-{
 				&icon{
 					fill: currentColor;
+					max-width:  11.75rem;
+					max-height: 1.75rem;
+
+					@media(--tablet-less){
+						max-width: 6.25rem;
+						max-height: 0.875rem;
+					}
 				}
 			}
 			@media(--desktop-less){
