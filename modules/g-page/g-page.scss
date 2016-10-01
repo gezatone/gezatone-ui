@@ -6,16 +6,6 @@
 	@media(--desktop-less){
 		display: flex;
 	}
-	&._blackout{
-		&:after{
-			z-index: 2;
-			position: fixed 0 0 0 0;
-			content: "";
-			width: 100%;
-			height: 100%;
-			background-color: color($color__green a(0.9));
-		}
-	}
 	&__{
 		&content{
 			width: 100%;
@@ -42,6 +32,17 @@
 			}
 			width: 16rem;
 			background-color: $color__white;
+		}
+		&overlay{
+			z-index: 2;
+			position: fixed 0 0 0 0;
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: color($color__green a(0.9));
+			&:not(._active){
+				display: none;
+			}
 		}
 	}
 }
