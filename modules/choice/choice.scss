@@ -40,6 +40,11 @@
 			@media(--tablet-less){
 				width: 100%;
 			}
+			&-{
+				&icon{
+					@extend .carousel-main__button-icon;
+				}
+			}
 		}
 	}
 }
