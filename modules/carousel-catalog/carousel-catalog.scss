@@ -1,6 +1,6 @@
 .carousel-catalog{
-	@extend .b-grid;
-	align-items: stretch;
+	// @extend .b-grid;
+	// align-items: stretch;
 	// pseudo-classes
 
 	// mods
@@ -10,5 +10,32 @@
 	// elements
 	&__{
 
+	}
+
+	.flickity-prev-next-button{
+		top: 100%;
+		margin-top: 1rem;
+		&.previous{
+			left: 50%;
+			transform: translate(-110%, -50%);
+		}
+		&.next{
+			right: 50%;
+			transform: translate(110%, -50%);
+		}
+		size: 2.375rem;
+		background: none;
+		box-shadow: inset 0 0 0 2px $color__gray--lightest;
+		&:hover{
+			background-color: $color--secondary;
+			box-shadow: none;
+		}
+		svg{
+			top: 50%;
+			left: 50%;
+			width: 40%;
+			height: 40%;
+			transform: translate(-50%, -50%);
+		}
 	}
 }
