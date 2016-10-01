@@ -50,14 +50,17 @@
 				}
 			}
 			&:hover .menu__submenu{
-				opacity: 1;
-				visibility: visible;
+				@media(--desktop-more){
+					opacity: 1;
+					visibility: visible;
+				}
 			}
 			&._active .menu__submenu{
 				@media(--desktop-less){
 					opacity: 1;
 					visibility: visible;
 					height: auto;
+					padding: 0.5rem 1.5rem;
 				}
 			}
 			&._active .menu__link{
@@ -101,6 +104,10 @@
 
 			&-{
 				&icon{
+					max-width: 0.5rem;
+					max-height: 0.875rem;
+					fill: currentColor;
+					color: $color__font--secondary;
 					position: absolute;
 					top: 50%;
 					right: 0;
@@ -126,6 +133,7 @@
 			}
 			@media(--desktop-less){
 				height: 0;
+				padding: 0;
 			}
 			&-{
 				&link{
