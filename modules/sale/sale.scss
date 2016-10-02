@@ -36,6 +36,7 @@
 		}
 		&img{
 			display: block;
+			object-fit: cover;
 
 			@media(--tablet-less){
 				width: auto;
@@ -47,8 +48,8 @@
 			top: 1.5rem;
 			left: 1.5rem;
 			@media(--tablet-less){
-				top: 1rem;
-				left: 1rem;
+				top: 0.625rem;
+				left: 0.625rem;
 			}
 		}
 		&info{
