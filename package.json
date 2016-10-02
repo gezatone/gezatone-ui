@@ -8,8 +8,8 @@
     "test": "ava test/*.js",
     "test:scripts": "eslint '{modules,src,tasks,test}/**/*.js'",
     "test:styles": "stylelint '{modules,src}/**/*.scss'",
-    "test:html": "htmlhint '{modules,src,build}/**/*.html'",
-    "posttest": "npm run test:scripts && npm run test:html && npm run test:styles"
+    "test:html": "htmlhint '{modules,src}/**/*.html'",
+    "posttest": "npm run test:scripts && npm run test:html"
   },
   "repository": {
     "type": "git",
