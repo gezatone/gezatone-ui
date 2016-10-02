@@ -1,2 +1,4 @@
-var carouselMainElem = document.querySelector('.carousel-main');
-var carouselMain = new Flickity( carouselMainElem, {});
+var Flickity = require('flickity')
+
+var carouselMainElem = document.querySelector('.carousel-main')
+new Flickity( carouselMainElem)
