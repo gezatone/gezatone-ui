@@ -7,24 +7,33 @@ document.addEventListener('DOMContentLoaded', function () {
 	HTMLCollection.prototype.forEach = Array.prototype.forEach;
 	NodeList.prototype.forEach = Array.prototype.forEach;
 
-	var searchButton = document.querySelectorAll(".actions__item--search").item(0);
-	var cartButton = document.querySelectorAll(".actions__item--cart").item(0);
-	var menuButton = document.querySelectorAll(".actions__menu").item(0);
+	var searchButton = document.querySelector(".actions__item--search");
+	var cartButton = document.querySelector(".actions__item--cart");
+	var menuButton = document.querySelector(".actions__menu");
+	var aboutButton = document.querySelector(".about__more");
+	var about = document.querySelector(".about");
 	var menuItems = document.querySelectorAll(".menu__item");
-	var cart = document.querySelectorAll(".cart-mini").item(0);
-	var overlay = document.querySelectorAll(".g-page__overlay").item(0);
-	var pageMenu = document.querySelectorAll(".g-page__menu").item(0);
-	var pageCart = document.querySelectorAll(".g-page__cart").item(0);
-	var pageContent = document.querySelectorAll(".g-page__content").item(0);
+	var cart = document.querySelector(".cart-mini");
+	var overlay = document.querySelector(".g-page__overlay");
+	var pageMenu = document.querySelector(".g-page__menu");
+	var pageCart = document.querySelector(".g-page__cart");
+	var pageContent = document.querySelector(".g-page__content");
 
+	aboutButton.addEventListener('click', function(){
+		about.classList.toggle("_active");
+		aboutButton.classList.toggle("_active");
+	})
 	searchButton.addEventListener('click', function(){
 		searchButton.classList.add("_active");
 		overlay.classList.add("_active");
 	})
 	cartButton.addEventListener('click', function(){
-		overlay.classList.add("_active");
-		pageCart.classList.add("_active");
-		pageContent.classList.add("_right");
+		console.log(screen.width);
+		if(screen.width<1280){
+			overlay.classList.add("_active");
+			pageCart.classList.add("_active");
+			pageContent.classList.add("_right");
+		}
 		cart.classList.toggle("_active");
 	})
 	menuButton.addEventListener('click', function(){
