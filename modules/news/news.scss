@@ -2,6 +2,7 @@
 	box-sizing: border-box;
 	position: relative;
 	padding: 1.5rem;
+	background-color: color($color__gray--lightest a(50%));
 	// pseudo-classes
 
 	// mods
@@ -11,6 +12,8 @@
 	// elements
 	&__{
 		&info{
+			position: relative;
+			z-index: 2;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -46,9 +49,9 @@
 			}
 		}
 		&description{
-			height: 3.75rem;
+			height: 4.5rem;
 			margin-top: 1.25rem;
-			font-size: 0.75rem;
+			font-size: 0.875rem;
 			font-weight: 300;
 			overflow: hidden;
 			@media(--tablet-less){
@@ -56,11 +59,11 @@
 			}
 		}
 		&img{
-			z-index: -1;
 			position: absolute;
 			top: 0;
 			right: 0;
 			height: 100%;
+			object-fit: cover;
 			@media(--tablet-less){
 				width: 100;
 				max-width: 100%;
@@ -106,8 +109,8 @@
 			top: 1.5rem;
 			left: 1.5rem;
 			@media(--tablet-less){
-				top: 1rem;
-				left: 1rem;
+				top: 0.625rem;
+				left: 0.625rem;
 			}
 		}
 	}
