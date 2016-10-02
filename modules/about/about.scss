@@ -8,7 +8,21 @@
 	// pseudo-classes
 
 	// mods
-
+	&:not(._active){
+		.about__body{
+			position: relative;
+			height: 5rem;
+			overflow: hidden;
+			&:after{
+				content: "";
+				position: absolute 0 0 0 0;
+				box-shadow: inset 0 -2rem 2rem $color__pink;
+				z-index: 2;
+			}
+		}
+		.about__more{
+		}
+	}
 	// pseudo-elements
 
 	// elements
@@ -16,17 +30,6 @@
 		&body{
 			@extend .b-grid;
 			@extend .b-grid--row;
-			&:not(._active){
-				position: relative;
-				height: 5rem;
-				overflow: hidden;
-				&:after{
-					content: "";
-					position: absolute 0 0 0 0;
-					box-shadow: inset 0 -2rem 2rem $color__pink;
-					z-index: 2;
-				}
-			}
 		}
 		&col{
 			width: 49%;
@@ -38,6 +41,17 @@
 			font-weight: 300;
 			text-decoration: underline;
 			cursor: pointer;
+			.about__more-text--show{
+				display: none;
+			}
+			&:not(._active){
+				.about__more-text--hidden{
+					display: none;
+				}
+				.about__more-text--show{
+					display: block;
+				}
+			}
 		}
 	}
 }
