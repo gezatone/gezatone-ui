@@ -1,5 +1,5 @@
 const webpack = require('webpack')
-const postcssPack = require('./utils/postcss-pack')
+const postcssConfig = require('./utils/postcss-config')
 const postxmlPack = require('postxml-pack-alanev')
 
 module.exports = {
@@ -38,8 +38,6 @@ module.exports = {
 				test: /\.s?css$/,
 				loaders: [
 					'file?name=[name].css',
-					'extract',
-					'css',
 					'postcss'
 				]
 			},
@@ -69,6 +67,6 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin()
 	],
-	postcss: postcssPack,
+	postcss: postcssConfig,
 	postxml: postxmlPack
 }

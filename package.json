@@ -54,6 +54,7 @@
     "postcss-mixins": "^5.2.0",
     "postcss-nested": "^1.0.0",
     "postcss-property-shorthand": "^1.0.0",
+    "postcss-scss": "^0.3.1",
     "postcss-short": "^1.4.0",
     "postcss-simple-vars": "^3.0.0",
     "postxml": "^0.2.9",
