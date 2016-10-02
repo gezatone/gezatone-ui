@@ -11,6 +11,7 @@
 		padding: 0 3rem;
 	}
 	@media(--tablet-less){
+		height: 12.5rem;
 		padding: 0 1.5rem;
 	}
 	// pseudo-classes
@@ -174,6 +175,7 @@
 			left: 60%;
 			transform: translate(-50%, 0);
 			z-index: 1;
+			object-fit: cover;
 			@media(--tablet-only){
 				left: 100%;
 				transform: translate(-100%, 0);
@@ -181,7 +183,7 @@
 			@media(--tablet-less){
 				left: 0;
 				transform: translate(0, 0);
-				width: 100%;
+				width: auto;
 				height: 100%;
 			}
 		}
