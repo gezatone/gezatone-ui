@@ -8,6 +8,7 @@
 		margin: 1.5rem 0;
 	}
 	@media(--tablet-less){
+		min-height: 250px;
 		margin: 0 0.5rem 1rem 0.5rem;
 		padding: 0;
 	}
@@ -69,6 +70,10 @@
 				&img{
 					max-width: 210px;
 					height: auto;
+					object-fit: cover;
+					@media(--tablet-less){
+						max-width: 100%;
+					}
 				}
 			}
 		}
