@@ -4,6 +4,11 @@ module.exports = function (webpack) {
 			require('postcss-import')({
 				addDependencyTo: webpack
 			}),
+
+			require('postcss-if-media')(),
+			require('postcss-mixins')(),
+			require('postcss-nested')(),
+			require('postcss-extend')(),
 			require('postcss-simple-vars')(),
 			require('postcss-each')(),
 
@@ -30,7 +35,6 @@ module.exports = function (webpack) {
 			// Optimisations
 			require('css-mqpacker')(),
 			require('cssnano')({
-				core: false,
 				autoprefixer: false
 			})
 		],
