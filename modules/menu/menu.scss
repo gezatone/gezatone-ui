@@ -38,13 +38,17 @@
 	&__{
 		&content{
 			@extend .b-grid;
-			@extend .b-grid--row;
+			flex-wrap: wrap;
 			align-items: center;
 		}
 		&item{
 			position: relative;
 			@media(--desktop-more){
 				&._active{
+					background-color: $color__font--secondary;
+					box-shadow: inset 0 -4px 0 $color--secondary;
+				}
+				&:hover{
 					background-color: $color__font--secondary;
 					box-shadow: inset 0 -4px 0 $color--secondary;
 				}
@@ -94,12 +98,6 @@
 				height: 2.5rem;
 				line-height: 2.5rem;
 				box-shadow: 0 1px 0 color($color__gray--lightest a(0.2));
-			}
-
-			&:not(._active){
-				&:hover{
-					color: $color--secondary;
-				}
 			}
 
 			&-{
