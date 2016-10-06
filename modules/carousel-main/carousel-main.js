@@ -1,4 +1,9 @@
-var Flickity = require('flickity')
+const Flickity = require('flickity')
 
-var carouselMainElem = document.querySelector('.carousel-main')
-new Flickity( carouselMainElem)
+const carouselMainElem = document.querySelector('.carousel-main')
+
+if (carouselMainElem) {
+	new Flickity(carouselMainElem, {
+		setGallerySize: false
+	})
+}
