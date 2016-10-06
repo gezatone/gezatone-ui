@@ -124,6 +124,7 @@
 			flex-direction: column;
 			justify-content: center;
 			transition: $animation__duration;
+			margin-right: 1.25rem;
 			@media(--desktop-less){
 				display: none;
 			}
