@@ -1,9 +1,9 @@
 <!doctype html>
 <html class="g-doc" lang="ru">
-	<import src="g-head"></import>
+	<import src="modules/g-head/g-head.htm"></import>
 	<body class="g-page">
 		<div class="g-page__menu">
-			<import src="menu-mobile"></import>
+			<import src="modules/menu-mobile/menu-mobile.htm"></import>
 		</div>
 		<div class="g-page__content">
 			<header>
@@ -21,58 +21,69 @@
 			<import src="carousel-main"></import>
 			<section class="g-section">
 				<div class="g-section__content">
+					<import src="modules/header/header.htm"></import>
+				</div>
+			</section>
+			<section class="g-section g-section--bg-green-dark">
+				<div class="g-section__content">
+					<import src="modules/menu/menu.htm" class=" menu--desktop"></import>
+				</div>
+			</section>
+			<import src="modules/carousel-main/carousel-main.htm"></import>
+			<section class="g-section">
+				<div class="g-section__content">
 					<h2 class="g-section__title">Самые популярные товары</h2>
 				</div>
 				<div class="g-section__content g-section__content--resize">
-					<import src="carousel-catalog"></import>
+					<import src="modules/carousel-catalog/carousel-catalog.htm"></import>
 				</div>
 			</section>
 			<section class="g-section">
 				<div class="g-section__content">
 					<h2 class="g-section__title">Новости и акции</h2>
-					<import src="news-sale"></import>
+					<import src="modules/news-sale/news-sale.htm"></import>
 				</div>
 			</section>
 			<section class="g-section">
 				<div class="g-section__content">
 					<div class="g-section__title">Каталоги</div>
-					<import src="catalogs"></import>
-					<import src="catalogs--reverse"></import>
+					<import src="modules/catalogs/catalogs.htm"></import>
+					<import src="modules/catalogs--reverse/catalogs--reverse.htm"></import>
 				</div>
 			</section>
 			<section class="g-section">
 				<div class="g-section__content">
 					<h2 class="g-section__title">Выберите лучший массажер</h2>
-					<import src="choice"></import>
+					<import src="modules/choice/choice.htm"></import>
 				</div>
 			</section>
 			<section class="g-section g-section--bg-pink">
 				<div class="g-section__content">
-					<import src="about"></import>
+					<import src="modules/about/about.htm"></import>
 				</div>
 			</section>
 			<footer>
 				<section class="g-section g-section--bg-green">
 					<div class="g-section__content">
-						<import src="information"></import>
+						<import src="modules/information/information.htm"></import>
 					</div>
 				</section>
 				<section class="g-section g-section--bg-green-dark">
 					<div class="g-section__content">
-						<import src="footer"></import>
+						<import src="modules/footer/footer.htm"></import>
 					</div>
 				</section>
 				<section class="g-section g-section--bg-green-darkest">
 					<div class="g-section__content">
-						<import src="copyright"></import>
+						<import src="modules/copyright/copyright.htm"></import>
 					</div>
 				</section>
 			</footer>
 			<div class="g-page__overlay"></div>
 		</div>
 		<div class="g-page__cart">
-			<import src="cart-mini" class=" cart-mini--modile _active"></import>
+			<import src="modules/cart-mini/cart-mini.htm" class=" cart-mini--modile _active"></import>
 		</div>
-		<import src="g-foot"></import>
+		<import src="modules/g-foot/g-foot.htm"></import>
 	</body>
 </html>

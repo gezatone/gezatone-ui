@@ -1,2 +1,11 @@
-var carouselCatalogElem = document.querySelector('.carousel-catalog');
-var carouselCatalog = new Flickity( carouselCatalogElem, {cellAlign: 'left', wrapAround: true, pageDots: false});
+const Flickity = require('flickity')
+
+const carouselCatalogElem = document.querySelector('.carousel-catalog')
+if (carouselCatalogElem) {
+
+	new Flickity( carouselCatalogElem, {
+		cellAlign: 'left',
+		wrapAround: true,
+		pageDots: false
+	})
+}

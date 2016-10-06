@@ -3,9 +3,12 @@
 	font-family: $font-family--primary;
 	overflow-x: hidden;
 	margin: 0;
-	@media(--desktop-less){
+
+	@media (--desktop-less){
 		display: flex;
 	}
+
+	// elements
 	&__{
 		&content{
 			width: 100%;
@@ -16,6 +19,16 @@
 			}
 			&._right{
 				margin-left: -16rem;
+			}
+
+			// mods
+			html._small &._{
+				&left{
+					margin-right: -16rem;
+				}
+				&right{
+					margin-left: -16rem;
+				}
 			}
 		}
 		&menu{
@@ -60,6 +73,10 @@
 				z-index: -1;
 				opacity: 0;
 				visibility: hidden;
+			}
+			// mods
+			html._small &._active{
+				display: block;
 			}
 		}
 	}
