@@ -22,33 +22,10 @@
 	// elements
 	&__{
 		&content{
-			width: $content;
 			max-width: $content;
-			padding: 0 1.5rem;
+			min-width: 280px;
+			padding: 0 1.25rem;
 			margin: 0 auto;
-			@media(--desktop-less){
-				padding: 0;
-			}
-			@media(--tablet-only){
-				max-width: $content--tablet;
-				width: $content--tablet;
-			}
-			@media(--phone-only){
-				max-width: $content--phone;
-				width: $content--phone;
-			}
-			&--{
-				&resize{
-					@media(--desktop-more){
-						max-width: calc($content + 5rem);
-						width: calc($content + 5rem);
-					}
-					@media(--tablet-less){
-						max-width: calc($content--phone + 2rem);
-						width: calc($content--phone + 2rem);
-					}
-				}
-			}
 		}
 		&title{
 			padding: 2.5rem 0 1.5rem 0;
