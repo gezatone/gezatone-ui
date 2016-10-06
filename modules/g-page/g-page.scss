@@ -3,18 +3,25 @@
 	font-family: $font-family--primary;
 	overflow-x: hidden;
 	margin: 0;
-	@media(--desktop-less){
+
+	@media (--desktop-less){
 		display: flex;
 	}
+
+	// elements
 	&__{
 		&content{
 			width: 100%;
 			overflow-x: hidden;
-			&._left{
-				margin-right: -16rem;
-			}
-			&._right{
-				margin-left: -16rem;
+
+			// mods
+			html._small &._{
+				&left{
+					margin-right: -16rem;
+				}
+				&right{
+					margin-left: -16rem;
+				}
 			}
 		}
 		&menu{
@@ -26,22 +33,28 @@
 			background-color: $color__green--darkest;
 		}
 		&cart{
+			display: none;
 			z-index: 101;
-			&:not(._active){
-				display: none;
-			}
 			width: 16rem;
 			background-color: $color__white;
+
+			// mods
+			html._small &._active{
+				display: block;
+			}
 		}
 		&overlay{
+			display: none;
 			z-index: 100;
 			position: fixed 0 0 0 0;
 			content: "";
 			width: 100%;
 			height: 100%;
 			background-color: color($color__green a(0.9));
-			&:not(._active){
-				display: none;
+
+			// mods
+			html._small &._active{
+				display: block;
 			}
 		}
 	}

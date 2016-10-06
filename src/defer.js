@@ -19,25 +19,32 @@ document.addEventListener('DOMContentLoaded', function () {
 	var pageMenu = document.querySelector('.g-page__menu')
 	var pageCart = document.querySelector('.g-page__cart')
 	var pageContent = document.querySelector('.g-page__content')
+	var html = document.querySelector('html')
 
-	aboutButton.addEventListener('click', function(){
+	window.addEventListener('resize', () => {
+		if (screen.width < 1280) {
+			html.classList.add('_small')
+			html.classList.remove('_large')
+		} else {
+			html.classList.add('_large')
+			html.classList.remove('_small')
+		}
+	})
+	aboutButton.addEventListener('click', () => {
 		about.classList.toggle('_active')
 		aboutButton.classList.toggle('_active')
 	})
-	searchButton.addEventListener('click', function(){
+	searchButton.addEventListener('click', () => {
 		searchButton.classList.add('_active')
 		overlay.classList.add('_active')
 	})
-	cartButton.addEventListener('click', function(){
-		console.log(screen.width)
-		if(screen.width<1280){
-			overlay.classList.add('_active')
-			pageCart.classList.add('_active')
-			pageContent.classList.add('_right')
-		}
+	cartButton.addEventListener('click', () => {
+		overlay.classList.toggle('_active')
+		pageCart.classList.toggle('_active')
+		pageContent.classList.toggle('_right')
 		cart.classList.toggle('_active')
 	})
-	menuButton.addEventListener('click', function(){
+	menuButton.addEventListener('click', () => {
 		overlay.classList.add('_active')
 		pageMenu.classList.add('_active')
 		pageContent.classList.add('_left')
@@ -47,7 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			item.classList.toggle('_active')
 		})
 	})
-	overlay.addEventListener('click', function(){
+	overlay.addEventListener('click', () => {
+		cart.classList.remove('_active')
 		overlay.classList.remove('_active')
 		searchButton.classList.remove('_active')
 		pageCart.classList.remove('_active')
