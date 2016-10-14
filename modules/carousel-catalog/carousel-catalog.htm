@@ -1,23 +1,33 @@
-<div class="carousel-catalog">
-	<import src="modules/product-mini/product-mini.htm" repeat="5"></import>
-	<div class="product-mini__container">
-		<div class="product-mini">
-			<div class="product-mini__star">☆</div>
-			<div class="product-mini__preview">
-				<img src=":210x170" alt="" class="product-mini__preview-img" />
-			</div>
-			<div class="product-mini__description">Массажер для лица и тела "Ультразвук+Миостимуляция" m115, Gezatone</div>
-			<div class="product-mini__price">8 900 р.</div>
-			<div class="product-mini__button">
-				<div class="product-mini__button-wrap">
-					<a href="#" class="product-mini__button-more">Подробнее</a>
-					<div class="product-mini__button-cart">
-						<icon class="product-mini__icon-cart">cart</icon>
-						<div class="product-mini__button-add">В корзину<icon class="product-mini__icon-cart product-mini__icon--button">cart</icon></div>
-						<div class="product-mini__button-dots"><span class="product-mini__icon-dots"></span></div>
+<div class="carousel-catalog swiper-container">
+	<div class="swiper-wrapper">
+		<import src="product-mini" repeat="5" class=" swiper-slide"></import>
+		<div class="swiper-slide product-mini__container">
+			<div class="product-mini">
+				<div class="product-mini__star">☆</div>
+				<div class="product-mini__preview">
+					<img src=":150x90" alt="" class="product-mini__preview-img" />
+				</div>
+				<div class="product-mini__description">Массажер для лица и тела "Ультразвук+Миостимуляция" m115, Gezatone</div>
+				<div class="product-mini__price">8 900 р.</div>
+				<div class="product-mini__button">
+					<div class="product-mini__button-wrap">
+						<a href="#" class="product-mini__button-more">Подробнее</a>
+						<div class="product-mini__button-cart">
+							<icon class="product-mini__icon-cart">cart</icon>
+							<div class="product-mini__button-add">В корзину<icon class="product-mini__icon-cart product-mini__icon--button">cart</icon></div>
+							<div class="product-mini__button-dots"><span class="product-mini__icon-dots"></span></div>
+						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="swiper-buttons">
+		<div class="swiper-button swiper-button-prev">
+			<icon width="7" height="13">arrow</icon>
+		</div>
+		<div class="swiper-button swiper-button-next">
+			<icon width="7" height="13">arrow</icon>
 		</div>
 	</div>
 </div>
