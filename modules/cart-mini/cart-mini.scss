@@ -3,11 +3,13 @@
 	z-index: 2;
 
 	width: 16rem;
-	padding: 1.5rem 0 1.5rem 1rem;
+	padding: 1.5rem 1rem;
 	margin-top: 2px;
 	border-radius: 0.375rem;
 	&:not(._active){
-		display: none;
+		@media(--desktop-more){
+			display: none;
+		}
 	}
 	@media(--desktop-more){
 		position: absolute;
@@ -28,19 +30,17 @@
 				display: none;
 			}
 		}
-		&mobile{
-			@media(--desktop-more){
-				display: none;
-			}
-		}
 	}
 	// pseudo-elements
 
 	// elements
 	&__{
 		&body{
-			max-height: 242px;
-			overflow-y: auto;
+			@media(--desktop-more){
+				max-height: 242px;
+				overflow-y: auto;
+				overflow-x: hidden;
+			}
 		}
 		&product{
 			@extend .b-grid;
@@ -50,6 +50,7 @@
 			}
 			&-{
 				&info{
+					max-width: calc(100% - 5.5rem);
 					margin-left: 1.5rem;
 				}
 				&name{
