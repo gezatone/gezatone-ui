@@ -7,6 +7,8 @@
 @import 'g-doc';
 @import 'g-page';
 
+@import 'node_modules/swiper/dist/css/swiper.css';
+
 @import 'b-svg';
 @import 'b-grid';
 @import 'g-section';

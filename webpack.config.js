@@ -1,6 +1,8 @@
 const webpack = require('webpack')
 const postcssConfig = require('./utils/postcss-config')
-const postxmlPack = require('postxml-pack-alanev')
+const postxmlConfig = require('./utils/postxml-config')
+
+require('./utils/fonts')
 
 const production = process.env.NODE_ENV === 'production'
 
@@ -71,7 +73,7 @@ const config = {
 		new webpack.NoErrorsPlugin()
 	],
 	postcss: postcssConfig,
-	postxml: postxmlPack
+	postxml: postxmlConfig
 }
 
 if (production) {

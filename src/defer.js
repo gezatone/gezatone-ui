@@ -2,8 +2,8 @@ require('./styles.css')
 require('./index.html')
 
 document.addEventListener('DOMContentLoaded', function () {
-	require('../modules/carousel-main/carousel-main.js')
-	require('../modules/carousel-catalog/carousel-catalog.js')
+	const menuMobile = require('../modules/carousel-main/carousel-main.js')
+	const cartModule = require('../modules/carousel-catalog/carousel-catalog.js')
 
 	HTMLCollection.prototype.forEach = Array.prototype.forEach
 	NodeList.prototype.forEach = Array.prototype.forEach
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	var pageContent = document.querySelector('.g-page__content')
 	var html = document.querySelector('html')
 
-	var screenType = null;
+	var screenType = null
 	var htmlHandler = (e) => {
 		console.log(e)
 		if (window.innerWidth < 1280 && screenType != 'mobile') {
