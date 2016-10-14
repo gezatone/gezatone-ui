@@ -3,6 +3,9 @@
 	position: relative;
 	padding: 1.5rem;
 	background-color: color($color__gray--lightest a(50%));
+	@media(--tablet-less){
+		padding: 0;
+	}
 	// pseudo-classes
 
 	// mods
@@ -19,6 +22,9 @@
 			justify-content: center;
 			width: 17rem;
 			height: 100%;
+			@media(--tablet-less){
+				width: 100%;
+			}
 		}
 		&title{
 			box-sizing: border-box;
