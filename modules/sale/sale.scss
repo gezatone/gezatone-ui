@@ -24,7 +24,9 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 100%;
+			@media(--desktop-less){
+				height: 100%;
+			}
 
 			@media(--tablet-less){
 				height: auto;
