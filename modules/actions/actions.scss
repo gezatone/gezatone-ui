@@ -32,10 +32,10 @@
 						visibility: visible;
 						width: 56rem;
 						@media(--tablet-only){
-							width: 36rem;
+							width: calc(100vw - 12rem);
 						}
 						@media(--tablet-less){
-							width: 20rem;
+							width: calc(100vw - 2rem);
 						}
 					}
 				}
