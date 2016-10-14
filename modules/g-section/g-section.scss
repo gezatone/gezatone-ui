@@ -26,6 +26,14 @@
 			min-width: 280px;
 			padding: 0 1.25rem;
 			margin: 0 auto;
+			&--{
+				&resize{
+					@media(--desktop-more){
+						box-sizing: border-box;
+						max-width: calc($content + 6rem);
+					}
+				}
+			}
 		}
 		&title{
 			padding: 2.5rem 0 1.5rem 0;
