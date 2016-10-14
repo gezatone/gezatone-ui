@@ -23,15 +23,13 @@
             padding: 10% 0;
         }
         &old{
-            .u-support--no-csstransforms &,
-            .u-support--no-csscalc &,
-            .u-support--no-flexbox &
+			.u-support--no-flexwrap &
             {
                 display: block;
             }
         }
     }
-	.u-support--no-flexbox .g-page > :not(&){
+	.u-support--no-flexwrap .g-page > :not(&){
 		display: none;
 	}
 }
