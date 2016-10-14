@@ -2,7 +2,9 @@ const webpack = require('webpack')
 const postcssConfig = require('./utils/postcss-config')
 const postxmlPack = require('postxml-pack-alanev')
 
-module.exports = {
+const production = process.env.NODE_ENV === 'production'
+
+const config = {
 	entry: {
 		defer: './src/defer.js',
 		async: './src/async.js'
@@ -10,6 +12,7 @@ module.exports = {
 	output: {
 		path: './build',
 		filename: '[name].js',
+		sourceMapFilename: '[file].map'
 	},
 	module: {
 		preLoaders: [
@@ -38,7 +41,7 @@ module.exports = {
 				test: /\.s?css$/,
 				loaders: [
 					'file?name=[name].css',
-					'postcss'
+					`postcss${production ? '?sourceMap=inline' : ''}`
 				]
 			},
 			{
@@ -70,3 +73,10 @@ module.exports = {
 	postcss: postcssConfig,
 	postxml: postxmlPack
 }
+
+if (production) {
+	config.devtool = 'source-map'
+	config.plugins.push(new webpack.optimize.UglifyJsPlugin())
+}
+
+module.exports = config

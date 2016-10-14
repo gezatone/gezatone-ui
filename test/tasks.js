@@ -11,6 +11,16 @@ const tasks = [
 			'styles.css',
 			'defer.js',
 		]
+	},
+	{
+		name: 'build --production',
+		output:
+		[
+			'index.html',
+			'styles.css',
+			'defer.js',
+			'defer.js.map',
+		]
 	}
 ]
 
