@@ -1,5 +1,6 @@
 .menu-footer{
 	width: 100%;
+	max-width: calc(100% - 15.5rem);
 	@extend .b-grid;
 	justify-content: space-around;
 	@media(--desktop-less){
