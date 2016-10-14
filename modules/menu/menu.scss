@@ -82,21 +82,25 @@
 			position: relative;
 			box-sizing: border-box;
 			display: block;
-			height: 3rem;
 			padding: 0 1rem;
 			line-height: 3rem;
 			text-align: center;
 			text-decoration: none;
-			white-space: nowrap;
 
 			color: $color__white;
 			font-size: 0.875rem;
 
 			transition: $animation__duration;
 
+			@media(--desktop-more){
+				height: 3rem;
+			}
 			@media(--desktop-less){
-				height: 2.5rem;
-				line-height: 2.5rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				min-height: 2.5rem;
+				line-height: 2rem;
 				box-shadow: 0 1px 0 color($color__gray--lightest a(0.2));
 			}
 
