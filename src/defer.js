@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	var searchButton = document.querySelector('.actions__item--search')
 	var cartButton = document.querySelector('.actions__item--cart')
-	var menuButton = document.querySelector('.actions__menu')
+	var menuButton = document.querySelector('.actions__item--menu')
 	var aboutButton = document.querySelector('.about__more')
 	var about = document.querySelector('.about')
 	var menuItems = document.querySelectorAll('.menu__item')
@@ -21,20 +21,35 @@ document.addEventListener('DOMContentLoaded', function () {
 	var pageContent = document.querySelector('.g-page__content')
 	var html = document.querySelector('html')
 
-	window.addEventListener('resize', () => {
-		if (screen.width < 1280) {
+	var screenType = null;
+	var htmlHandler = (e) => {
+		console.log(e)
+		if (window.innerWidth < 1280 && screenType != 'mobile') {
+			screenType = 'mobile'
 			html.classList.add('_small')
 			html.classList.remove('_large')
-		} else {
+			menuMobile.mobile()
+			cartModule.mobile()
+			console.log(screenType)
+		} else if (window.innerWidth >= 1280 && screenType != 'desktop') {
+			screenType = 'desktop'
 			html.classList.add('_large')
 			html.classList.remove('_small')
+			menuMobile.desktop()
+			cartModule.desktop()
+			console.log(screenType)
 		}
-	})
+	}
+
+	window.addEventListener('resize', htmlHandler)
+	window.addEventListener('load', htmlHandler)
+
 	aboutButton.addEventListener('click', () => {
 		about.classList.toggle('_active')
 		aboutButton.classList.toggle('_active')
 	})
 	searchButton.addEventListener('click', () => {
+		html.classList.add('_overlay')
 		searchButton.classList.add('_active')
 		overlay.classList.add('_active')
 	})
