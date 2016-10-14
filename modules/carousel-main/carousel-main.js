@@ -1,9 +1,15 @@
-const Flickity = require('flickity')
+var mySwiper = new Swiper ('.carousel-main.swiper-container', {
+	// Optional parameters
+	loop: true,
+	autoHeight: true,
 
-const carouselMainElem = document.querySelector('.carousel-main')
+	// If we need pagination
+	pagination: '.carousel-main .swiper-pagination',
 
-if (carouselMainElem) {
-	new Flickity(carouselMainElem, {
-		setGallerySize: false
-	})
-}
+	// Navigation arrows
+	nextButton: '.carousel-main .swiper-button-next',
+	prevButton: '.carousel-main .swiper-button-prev',
+})
+setTimeout(function () {
+	mySwiper.update(true)
+}, 200)
