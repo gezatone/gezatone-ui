@@ -1,6 +1,18 @@
 .header{
-
+	position: relative;
 	background-color: $color__white;
+	@media(--desktop-less){
+		&:after{
+			content: "";
+			z-index: 2;
+			position: absolute;
+			top: 100%;
+			left: -100%;
+			width: 300%;
+			height: 2px;
+			background-color: hsl(174, 100%, 32%);
+		}
+	}
 	// pseudo-classes
 
 	// mods
