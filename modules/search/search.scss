@@ -1,12 +1,12 @@
 .search{
-	z-index: 2;
+	z-index: 4;
 	opacity: 0;
 	visibility: hidden;
 	box-sizing: border-box;
 	position: absolute;
 	top: 0;
-	right: -1px;
-	width: 100%;
+	left: 100%;
+	width: 56rem;
 	height: 100%;
 	@extend .b-grid;
 	@extend .b-grid--row;
@@ -16,11 +16,13 @@
 	background-color: $color__white;
 	transition: calc($animation__duration * 2);
 	@media(--tablet-only){
+		width: calc(100vw - 12rem);
 		right: auto;
 		left: 0;
 	}
 	@media(--tablet-less){
 		position: fixed;
+		width: calc(100vw - 2rem);
 		height: 3rem;
 		top: 2rem;
 		right: auto;
