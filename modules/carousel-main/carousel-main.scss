@@ -134,6 +134,7 @@
 						}
 
 						> svg {
+							margin-right: 0.25rem;
 							transform: rotate(180deg);
 						}
 					}
@@ -143,6 +144,9 @@
 
 						@media(--tablet-only){
 							right: 2rem;
+						}
+						> svg{
+							margin-left: 0.125rem;
 						}
 					}
 				}
