@@ -19,6 +19,11 @@ const menuMobile = {
 				const clone = element.cloneNode(true)
 				clone.classList.remove(`${name}--desktop`)
 				clone.classList.add(`${name}--mobile`)
+				clone.querySelectorAll('.menu__item').forEach(item => {
+					item.addEventListener('click', () => {
+						item.classList.toggle('_active')
+					})
+				})
 				menuElement.appendChild(clone)
 			}
 		})
