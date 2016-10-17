@@ -1,6 +1,4 @@
-const Swiper = require('swiper')
-
-const catalogSwiper = new Swiper ('.carousel-catalog.swiper-container', {
+var mySwiper = new Swiper ('.carousel-catalog.swiper-container', {
 	// Optional parameters
 	loop: true,
 	slidesPerView: 'auto',
@@ -13,5 +11,5 @@ const catalogSwiper = new Swiper ('.carousel-catalog.swiper-container', {
 	prevButton: '.carousel-catalog .swiper-button-prev',
 })
 setTimeout(function () {
-	catalogSwiper.update(true)
+	mySwiper.update(true)
 }, 200)
