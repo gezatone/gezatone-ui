@@ -21,9 +21,13 @@
 				}
  			}
 		}
-		&menu{
+		&menu,
+		&cart{
+			position: relative;
 			z-index: 3;
 			transition: $animation__duration;
+		}
+		&menu{
 			&:not(._active){
 				margin-left: -16rem;
 			}
@@ -33,8 +37,6 @@
 			box-shadow: inset -2px 0 0.5rem color($color__black a(0.1));
 		}
 		&cart{
-			z-index: 3;
-			transition: $animation__duration;
 			&:not(._active){
 				width: 0;
 				min-width: 0;
