@@ -54,16 +54,19 @@
 					margin-left: 1.5rem;
 				}
 				&name{
+					line-height: 0.875rem;
 					font-size: 0.75rem;
 					font-weight: 300;
 				}
 				&price{
+					margin-top: 0.25rem;
 					color: $color__font--secondary;
 					font-size: 1.125rem;
 					font-weight: 700;
 				}
 				&number{
-					color: $color__gray--lightest;
+					margin-top: 0.25rem;
+					color: hsl(0, 0%, 70%);
 					font-size: 0.75rem;
 				}
 			}
@@ -76,7 +79,7 @@
 			&-{
 				&number{
 					text-align: right;
-					color: $color__gray--lightest;
+					color: hsl(0, 0%, 70%);
 					font-size: 0.75rem;
 				}
 				&price{
