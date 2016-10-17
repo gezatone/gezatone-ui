@@ -1,9 +1,13 @@
 require('./styles.css')
 require('./index.html')
 
+const menuMobile = require('../modules/menu-mobile/menu-mobile.js')
+const cartModule = require('../modules/cart-mini/cart-mini.js')
+
 document.addEventListener('DOMContentLoaded', function () {
-	const menuMobile = require('../modules/carousel-main/carousel-main.js')
-	const cartModule = require('../modules/carousel-catalog/carousel-catalog.js')
+	require('picturefill')
+	require('../modules/carousel-main/carousel-main.js')
+	require('../modules/carousel-catalog/carousel-catalog.js')
 
 	HTMLCollection.prototype.forEach = Array.prototype.forEach
 	NodeList.prototype.forEach = Array.prototype.forEach
@@ -13,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	var menuButton = document.querySelector('.actions__item--menu')
 	var aboutButton = document.querySelector('.about__more')
 	var about = document.querySelector('.about')
-	var menuItems = document.querySelectorAll('.menu__item')
 	var cart = document.querySelector('.cart-mini')
 	var overlay = document.querySelector('.g-page__overlay')
 	var pageMenu = document.querySelector('.g-page__menu')
@@ -22,22 +25,19 @@ document.addEventListener('DOMContentLoaded', function () {
 	var html = document.querySelector('html')
 
 	var screenType = null
-	var htmlHandler = (e) => {
-		console.log(e)
+	var htmlHandler = function () {
 		if (window.innerWidth < 1280 && screenType != 'mobile') {
 			screenType = 'mobile'
 			html.classList.add('_small')
 			html.classList.remove('_large')
 			menuMobile.mobile()
 			cartModule.mobile()
-			console.log(screenType)
 		} else if (window.innerWidth >= 1280 && screenType != 'desktop') {
 			screenType = 'desktop'
 			html.classList.add('_large')
 			html.classList.remove('_small')
 			menuMobile.desktop()
 			cartModule.desktop()
-			console.log(screenType)
 		}
 	}
 
@@ -63,11 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		overlay.classList.add('_active')
 		pageMenu.classList.add('_active')
 		pageContent.classList.add('_left')
-	})
-	menuItems.forEach(item => {
-		item.addEventListener('click', () => {
-			item.classList.toggle('_active')
-		})
 	})
 	overlay.addEventListener('click', () => {
 		cart.classList.remove('_active')
