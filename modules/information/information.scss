@@ -33,6 +33,7 @@
 			color: $color__white;
 			font-size: 0.75rem;
 			text-transform: uppercase;
+			white-space: nowrap;
 			@media(--desktop-less){
 				&:not(:last-child){
 					margin-right: 0;
