@@ -1,44 +1,48 @@
-@import 'g-fonts';
-@import 'g-reset';
-@import 'u-vars';
-@import 'u-mixins';
+@import '../modules/g-fonts/g-fonts.scss';
+@import '../modules/g-reset/g-reset.scss';
+@import '../modules/u-vars/animation.scss';
+@import '../modules/u-vars/colors.scss';
+@import '../modules/u-vars/fonts.scss';
+@import '../modules/u-vars/media.scss';
+@import '../modules/u-vars/properties.scss';
+@import '../modules/u-vars/sizes.scss';
 
-@import 'g-errors';
-@import 'g-doc';
-@import 'g-page';
+@import '../modules/g-errors/g-errors.scss';
+@import '../modules/g-doc/g-doc.scss';
+@import '../modules/g-page/g-page.scss';
 
-@import 'node_modules/swiper/dist/css/swiper.css';
+@import '../modules/node_modules/node_modules/swiper/dist/css/swiper.css';
 
-@import 'b-svg';
-@import 'b-grid';
-@import 'g-section';
-@import 'header';
-@import 'menu-pages';
-@import 'actions';
+@import '../modules/b-svg/b-svg.scss';
+@import '../modules/b-grid/b-grid.scss';
+@import '../modules/g-section/g-section.scss';
+@import '../modules/header/header.scss';
+@import '../modules/menu-pages/menu-pages.scss';
+@import '../modules/actions/actions.scss';
 
-@import 'menu';
-@import 'carousel-main';
-@import 'information';
-@import 'footer';
-@import 'copyright';
-@import 'menu-footer';
-@import 'button';
+@import '../modules/menu/menu.scss';
+@import '../modules/carousel-main/carousel-main.scss';
+@import '../modules/information/information.scss';
+@import '../modules/footer/footer.scss';
+@import '../modules/copyright/copyright.scss';
+@import '../modules/menu-footer/menu-footer.scss';
+@import '../modules/button/button.scss';
 
-@import 'carousel-catalog';
-@import 'product-mini';
-@import 'news-sale';
-@import 'news';
-@import 'sale';
-@import 'tag';
-@import 'catalogs';
-@import 'choice';
-@import 'options';
-@import 'form';
-@import 'about';
+@import '../modules/carousel-catalog/carousel-catalog.scss';
+@import '../modules/product-mini/product-mini.scss';
+@import '../modules/news-sale/news-sale.scss';
+@import '../modules/news/news.scss';
+@import '../modules/sale/sale.scss';
+@import '../modules/tag/tag.scss';
+@import '../modules/catalogs/catalogs.scss';
+@import '../modules/choice/choice.scss';
+@import '../modules/options/options.scss';
+@import '../modules/form/form.scss';
+@import '../modules/about/about.scss';
 
-@import 'search';
+@import '../modules/search/search.scss';
 
-@import 'cart-mini';
-@import 'phone';
-@import 'menu-mobile';
-@import 'payment';
+@import '../modules/cart-mini/cart-mini.scss';
+@import '../modules/phone/phone.scss';
+@import '../modules/menu-mobile/menu-mobile.scss';
+@import '../modules/payment/payment.scss';

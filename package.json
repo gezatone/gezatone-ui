@@ -4,7 +4,9 @@
   "description": "Layout site",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --content-base build/ & node ./utils/watch-html",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:main": "webpack-dev-server --content-base build/",
+    "dev:html": "node ./utils/watch-html",
     "test": "ava test/*.js",
     "test:scripts": "eslint '{modules,src,tasks,test}/**/*.js'",
     "test:styles": "stylelint '{modules,src}/**/*.scss'",
@@ -47,6 +49,7 @@
     "modernizr": "^3.3.1",
     "modernizr-loader": "0.0.5",
     "nodemon": "^1.10.2",
+    "npm-run-all": "^3.1.1",
     "picturefill": "^3.0.2",
     "postcss-animation": "0.0.11",
     "postcss-brand-colors": "^0.4.0",

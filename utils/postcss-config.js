@@ -4,11 +4,6 @@ module.exports = function (webpack) {
 	return {
 		plugins: [
 			require('postcss-import')({
-				resolve: function(id) {
-					if (!/(\\|\/|\.)/.test(id))
-						return glob.sync('modules/' + id + '/*.scss')
-					return id
-				},
 				addDependencyTo: webpack
 			}),
 

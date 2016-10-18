@@ -1,5 +1,5 @@
 const { watch } = require('chokidar')
-const { createReadStream: read, createWriteStream: write } = require('fs')
+const { readFileSync: read, writeFileSync: write } = require('fs')
 const name = './src/index.html'
 const watchOptions = {
 	ignoreInitial: true
@@ -7,7 +7,6 @@ const watchOptions = {
 
 watch(['modules/*/*.htm'], watchOptions)
 	.on('all', (e, path) => {
-		read(name)
-			.pipe(write(name))
+		write(name, read(name))
 		console.log(e, path, ' done')
 	})
