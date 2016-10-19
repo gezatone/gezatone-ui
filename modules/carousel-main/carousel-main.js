@@ -1,4 +1,6 @@
-var mySwiper = new Swiper ('.carousel-main.swiper-container', {
+const Swiper = require('swiper')
+
+const mainSwiper = new Swiper('.carousel-main.swiper-container', {
 	// Optional parameters
 	loop: true,
 	autoHeight: true,
@@ -11,5 +13,5 @@ var mySwiper = new Swiper ('.carousel-main.swiper-container', {
 	prevButton: '.carousel-main .swiper-button-prev',
 })
 setTimeout(function () {
-	mySwiper.update(true)
+	mainSwiper.update(true)
 }, 500)
