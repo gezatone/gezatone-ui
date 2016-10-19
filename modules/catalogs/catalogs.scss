@@ -183,7 +183,8 @@
 				transform: translate(-100%, 0);
 			}
 			@media(--tablet-less){
-				left: 0;
+				left: auto;
+				right: 0;
 				transform: translate(0, 0);
 				width: auto;
 				height: 100%;
