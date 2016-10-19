@@ -2,75 +2,77 @@
 <html class="g-doc" lang="ru">
 	<import src="g-head"></import>
 	<body class="g-page">
-		<div class="g-page__menu">
-			<import src="menu-mobile"></import>
-		</div>
-		<div class="g-page__content">
-			<header>
+		<div class="g-page__wrap">
+			<div class="g-page__menu">
+				<import src="menu-mobile"></import>
+			</div>
+			<div class="g-page__content">
+				<header>
+					<section class="g-section">
+						<div class="g-section__content">
+							<import src="header"></import>
+						</div>
+					</section>
+					<section class="g-section g-section--bg-green-dark">
+						<div class="g-section__content">
+							<import src="menu" class=" menu--desktop"></import>
+						</div>
+					</section>
+				</header>
+				<import src="carousel-main"></import>
 				<section class="g-section">
 					<div class="g-section__content">
-						<import src="header"></import>
+						<h2 class="g-section__title">Самые популярные товары</h2>
+					</div>
+					<div class="g-section__content g-section__content--resize">
+						<import src="carousel-catalog"></import>
 					</div>
 				</section>
-				<section class="g-section g-section--bg-green-dark">
+				<section class="g-section">
 					<div class="g-section__content">
-						<import src="menu" class=" menu--desktop"></import>
+						<h2 class="g-section__title">Новости и акции</h2>
+						<import src="news-sale"></import>
 					</div>
 				</section>
-			</header>
-			<import src="carousel-main"></import>
-			<section class="g-section">
-				<div class="g-section__content">
-					<h2 class="g-section__title">Самые популярные товары</h2>
-				</div>
-				<div class="g-section__content g-section__content--resize">
-					<import src="carousel-catalog"></import>
-				</div>
-			</section>
-			<section class="g-section">
-				<div class="g-section__content">
-					<h2 class="g-section__title">Новости и акции</h2>
-					<import src="news-sale"></import>
-				</div>
-			</section>
-			<section class="g-section">
-				<div class="g-section__content">
-					<div class="g-section__title">Каталоги</div>
-					<import src="catalogs"></import>
-					<import src="catalogs--reverse"></import>
-				</div>
-			</section>
-			<section class="g-section">
-				<div class="g-section__content">
-					<h2 class="g-section__title">Выберите лучший массажер</h2>
-					<import src="choice"></import>
-				</div>
-			</section>
-			<section class="g-section g-section--bg-pink">
-				<div class="g-section__content">
-					<import src="about"></import>
-				</div>
-			</section>
-			<footer>
-				<section class="g-section g-section--bg-green">
+				<section class="g-section">
 					<div class="g-section__content">
-						<import src="information"></import>
+						<div class="g-section__title">Каталоги</div>
+						<import src="catalogs"></import>
+						<import src="catalogs--reverse"></import>
 					</div>
 				</section>
-				<section class="g-section g-section--bg-green-dark">
+				<section class="g-section">
 					<div class="g-section__content">
-						<import src="footer"></import>
+						<h2 class="g-section__title">Выберите лучший массажер</h2>
+						<import src="choice"></import>
 					</div>
 				</section>
-				<section class="g-section g-section--bg-green-darkest">
+				<section class="g-section g-section--bg-pink">
 					<div class="g-section__content">
-						<import src="copyright"></import>
+						<import src="about"></import>
 					</div>
 				</section>
-			</footer>
-			<div class="g-page__overlay"></div>
+				<footer>
+					<section class="g-section g-section--bg-green">
+						<div class="g-section__content">
+							<import src="information"></import>
+						</div>
+					</section>
+					<section class="g-section g-section--bg-green-dark">
+						<div class="g-section__content">
+							<import src="footer"></import>
+						</div>
+					</section>
+					<section class="g-section g-section--bg-green-darkest">
+						<div class="g-section__content">
+							<import src="copyright"></import>
+						</div>
+					</section>
+				</footer>
+				<div class="g-page__overlay"></div>
+			</div>
+			<div class="g-page__cart"></div>
 		</div>
-		<div class="g-page__cart"></div>
 		<import src="g-foot"></import>
 	</body>
 </html>

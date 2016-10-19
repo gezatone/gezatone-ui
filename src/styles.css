@@ -11,7 +11,7 @@
 @import '../modules/g-doc/g-doc.scss';
 @import '../modules/g-page/g-page.scss';
 
-@import '../modules/node_modules/node_modules/swiper/dist/css/swiper.css';
+@import '../node_modules/swiper/dist/css/swiper.css';
 
 @import '../modules/b-svg/b-svg.scss';
 @import '../modules/b-grid/b-grid.scss';
