@@ -11,7 +11,8 @@
     "test:scripts": "eslint '{modules,src,tasks,test}/**/*.js'",
     "test:styles": "stylelint '{modules,src}/**/*.scss'",
     "test:html": "htmlhint '{modules,src}/**/*.html'",
-    "posttest": "npm run test:scripts && npm run test:html"
+    "posttest": "npm run test:scripts && npm run test:html",
+    "gh-pages": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "file-loader": "^0.9.0",
     "flickity": "^2.0.4",
     "gezatone-graphics": "github:gezatone/gezatone-graphics",
+    "gh-pages": "^0.12.0",
     "glob": "^7.1.1",
     "html-loader": "^0.4.4",
     "htmlhint": "^0.9.13",
