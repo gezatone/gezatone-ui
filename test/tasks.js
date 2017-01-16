@@ -9,7 +9,11 @@ const tasks = [
 		[
 			'index.html',
 			'styles.css',
+			'async.js',
+			'async.js.map',
 			'defer.js',
+			'defer.js.map',
+			'assets/fonts'
 		]
 	},
 	{
@@ -18,13 +22,15 @@ const tasks = [
 		[
 			'index.html',
 			'styles.css',
+			'async.js',
 			'defer.js',
-			'defer.js.map',
+			'assets/fonts',
+			'assets/placehold'
 		]
 	}
 ]
 
-test.before('remove build dir', () => {
+test.beforeEach('remove build dir', () => {
 	return exec('rm -rf ../build/')
 		.then(() => {
 			console.log('Build folder is removed')
