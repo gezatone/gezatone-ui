@@ -1,7 +1,7 @@
 const request = require('request')
 const { parse: parseUrl } = require('url')
 const { createWriteStream } = require('fs')
-const mkdrip = require('mkdrip')
+const mkdirp = require('mkdirp')
 
 const production = process.env.NODE_ENV === 'production'
 
@@ -37,7 +37,7 @@ if (production) {
 				'source[srcset^="http://placehold.alanev.ru/"]'
 			].join(',')
 			return $ => {
-				mkdrip('build/assets/placehold', (err) => {
+				mkdirp('build/assets/placehold', (err) => {
 					if (!err) {
 						$(selector)
 							.map((index, item) => {
