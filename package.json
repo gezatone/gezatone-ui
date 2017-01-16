@@ -76,6 +76,7 @@
     "postxml-placeholder": "^0.1.2",
     "postxml-repeat": "^0.2.0",
     "postxml-wrap": "^0.2.2",
+    "request": "^2.79.0",
     "style-loader": "^0.13.1",
     "stylelint": "^7.3.1",
     "stylelint-config-standard": "^13.0.2",
