@@ -1,6 +1,7 @@
 const request = require('request')
 const { parse: parseUrl } = require('url')
 const { createWriteStream } = require('fs')
+const mkdrip = require('mkdrip')
 
 const production = process.env.NODE_ENV === 'production'
 
@@ -36,27 +37,31 @@ if (production) {
 				'source[srcset^="http://placehold.alanev.ru/"]'
 			].join(',')
 			return $ => {
-				$(selector)
-					.map((index, item) => {
-						const attr = $(item).attr('src') ? 'src' : 'srcset'
-						const value = $(item).attr(attr)
-						const name = parseUrl(`${value}.jpg`).path.slice(1).replace('/', '-')
+				mkdrip('build/assets/placehold', (err) => {
+					if (!err) {
+						$(selector)
+							.map((index, item) => {
+								const attr = $(item).attr('src') ? 'src' : 'srcset'
+								const value = $(item).attr(attr)
+								const name = parseUrl(`${value}.jpg`).path.slice(1).replace('/', '-')
 
-						$(item).attr(attr, `assets/placehold/${name}`)
-						return value
-					})
-					.get()
-					.filter((item, index, arr) => {
-						return arr.indexOf(item) == index
-					})
-					.forEach((image, index) => {
-						const name = parseUrl(`${image}.jpg`).path.slice(1).replace('/', '-')
+								$(item).attr(attr, `assets/placehold/${name}`)
+								return value
+							})
+							.get()
+							.filter((item, index, arr) => {
+								return arr.indexOf(item) == index
+							})
+							.forEach((image, index) => {
+								const name = parseUrl(`${image}.jpg`).path.slice(1).replace('/', '-')
 
-						setTimeout(() => {
-							request(`${image}.jpg`)
-								.pipe(createWriteStream(`build/assets/placehold/${name}`))
-						}, index * 500)
-					})
+								setTimeout(() => {
+									request(`${image}.jpg`)
+										.pipe(createWriteStream(`build/assets/placehold/${name}`))
+								}, index * 500)
+							})
+					}
+				})
 			}
 		})()
 	)
