@@ -7,6 +7,7 @@ require('./utils/fonts')
 const production = process.env.NODE_ENV === 'production'
 
 const config = {
+	devtool: production ? 'cheap-eval-source-map' : 'source-map',
 	entry: {
 		defer: './src/defer.js',
 		async: './src/async.js'
@@ -43,7 +44,7 @@ const config = {
 				test: /\.s?css$/,
 				loaders: [
 					'file?name=[name].css',
-					`postcss${production ? '?sourceMap=inline' : ''}`
+					`postcss${production ? '' : '?sourceMap=inline'}`
 				]
 			},
 			{
@@ -77,8 +78,11 @@ const config = {
 }
 
 if (production) {
-	config.devtool = 'source-map'
-	config.plugins.push(new webpack.optimize.UglifyJsPlugin())
+	config.plugins.push(new webpack.optimize.UglifyJsPlugin({
+		compress: {
+			warnings: false
+		}
+	}))
 }
 
 module.exports = config
